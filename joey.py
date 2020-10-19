@@ -63,6 +63,17 @@ if __name__ == '__main__':
         elif 'open youtube' in query:
             webbrowser.open("youtube.com")
 
+        elif 'it\'s my birthday today' in query:
+            print(" Wow! Wish you a very Happy Birthday")
+            speak(" Wow! Wish you a very Happy Birthday")
+
+        elif "where is" in query:
+            data = query.split(" ")
+            location = data[2]
+            speak("Hold on, I will show you where " + location + " is.")
+            os.system('cmd /k "start chrome https://www.google.nl/maps/place/"'+ location)
+            # os.system("start chrome https://www.google.nl/maps/place/" + location)
+
         elif 'open google' in query:
             webbrowser.open("google.com")
         elif 'open geeks for geeks' in query:
